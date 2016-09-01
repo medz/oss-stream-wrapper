@@ -1,0 +1,24 @@
+{
+    "name": "medz/oss-stream-wrapper",
+    "type": "library",
+    "description": "The streamWrapper class && Aliyun OSS SDK.",
+    "keywords": ["medz", "php", "oss", "wrapper", "streamWrapper"],
+    "homepage": "http://medz.cn",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seven Du",
+            "email": "lovevipdsw@outlook.com",
+            "homepage": "http://medz.cn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "classmap": [
+            "src/WrapperInterface.php"
+        ]
+    }
+}
