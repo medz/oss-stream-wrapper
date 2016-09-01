@@ -1,7 +1,7 @@
 {
     "name": "medz/oss-stream-wrapper",
     "type": "library",
-    "description": "A Aliyun OSS streamWrapper class and Aliyun OSS SDK.\n 阿里云streamWrapper文件协议和阿里云oss sdk.",
+    "description": "A Aliyun OSS streamWrapper class and Aliyun OSS SDK.",
     "keywords": ["medz", "php", "oss", "wrapper", "streamWrapper"],
     "homepage": "http://medz.cn",
     "license": "MIT",
