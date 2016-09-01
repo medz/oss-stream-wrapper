@@ -19,5 +19,8 @@
         "aliyuncs/oss-sdk-php": "^2.0"
     },
     "autoload": {
+        "psr-4": {
+            "Medz\\Component\\AliyunOSS\\": "src/"
+        }
     }
 }
