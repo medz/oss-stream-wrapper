@@ -1,6 +1,6 @@
 <?php
 
-namespace Medz\Component\AliyunOSS;
+namespace Medz\Component\StreamWrapper\AliyunOSS;
 
 use Exception;
 use OSS\OssClient;

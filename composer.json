@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Medz\\Component\\AliyunOSS\\": "src/"
+            "Medz\\Component\\StreamWrapper\\AliyunOSS\\": "src/"
         }
     }
 }
