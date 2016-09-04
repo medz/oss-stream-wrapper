@@ -2,13 +2,13 @@
 
 namespace Medz\Component\StreamWrapper\AliyunOSS\Tests;
 
-use PHPUnit_Framework_TestCase;
 use Medz\Component\StreamWrapper\AliyunOSS\AliyunOSS;
+use PHPUnit_Framework_TestCase;
 
 /**
- * 基础测试
+ * 基础测试.
  *
- * @author Seven Du <lovevipdsw@outlook.com> 
+ * @author Seven Du <lovevipdsw@outlook.com>
  **/
 class BaseTest extends PHPUnit_Framework_TestCase
 {
@@ -39,6 +39,7 @@ class BaseTest extends PHPUnit_Framework_TestCase
      * Test get client.
      *
      * @return void
+     *
      * @author Seven Du <lovevipdsw@outlook.com>
      * @homepage http://medz.cn
      */
@@ -51,6 +52,7 @@ class BaseTest extends PHPUnit_Framework_TestCase
      * Test put file to OSS.
      *
      * @return void
+     *
      * @author Seven Du <lovevipdsw@outlook.com>
      * @homepage http://medz.cn
      */
@@ -65,6 +67,7 @@ class BaseTest extends PHPUnit_Framework_TestCase
      * Test file exists.
      *
      * @return void
+     *
      * @author Seven Du <lovevipdsw@outlook.com>
      * @homepage http://medz.cn
      */
@@ -81,6 +84,7 @@ class BaseTest extends PHPUnit_Framework_TestCase
      * Test get file content by oss.
      *
      * @return void
+     *
      * @author Seven Du <lovevipdsw@outlook.com>
      * @homepage http://medz.cn
      */
@@ -89,5 +93,4 @@ class BaseTest extends PHPUnit_Framework_TestCase
         $data = file_get_contents('oss://oss-stream-wrapper/phpunit.txt');
         $this->assertSame($data, 'medz');
     }
-
 } // END class BaseTest extends PHPUnit_Framework_TestCase
