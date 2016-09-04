@@ -14,18 +14,15 @@ class BaseTest extends PHPUnit_Framework_TestCase
 {
     protected $oss;
 
-    protected $bucketName;
-
     // 初始化
     public function setUp()
     {
-        $this->bucketName = getenv('OSS_BUCKET');
         $this->oss = new AliyunOSS(
             getenv('OSS_ACCESS_KEY_ID'),
             getenv('OSS_ACCESS_KEY_SECRET'),
             getenv('OSS_ENDPOINT')
         );
-        $this->oss->setBucket($this->bucketName);
+        $this->oss->setBucket(getenv('OSS_BUCKET'));
         $this->oss->registerStreamWrapper('oss');
     }
 
