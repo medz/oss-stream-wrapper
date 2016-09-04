@@ -18,9 +18,18 @@
         "medz/stream-wrapper-interface": "^1.0",
         "aliyuncs/oss-sdk-php": "^2.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^4|^5",
+        "satooshi/php-coveralls": "^1.0"
+    },
     "autoload": {
         "psr-4": {
             "Medz\\Component\\StreamWrapper\\AliyunOSS\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Medz\\Component\\StreamWrapper\\AliyunOSS\\Tests\\": "tests/"
         }
     }
 }
