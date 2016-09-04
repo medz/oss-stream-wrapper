@@ -1,0 +1,7 @@
+export OSS_ACCESS_KEY_ID=您从OSS获得的AccessKeyId
+
+export OSS_ACCESS_KEY_SECRET=您从OSS获得的AccessKeySecret
+
+export OSS_ENDPOINT=您选定的OSS数据中心访问域名，例如oss-cn-hangzhou.aliyuncs.com
+
+export OSS_BUCKET=您使用的Bucket名字，注意命名规范
