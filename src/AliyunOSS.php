@@ -20,7 +20,7 @@ class AliyunOSS extends OssClient
         return static::$bucket;
     }
 
-    public function setBucket(string $bucket)
+    public function setBucket($bucket)
     {
         static::$bucket = $bucket;
 
