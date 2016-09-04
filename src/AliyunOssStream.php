@@ -3,8 +3,8 @@
 namespace Medz\Component\StreamWrapper\AliyunOSS;
 
 use Exception;
-use OSS\OssClient;
 use Medz\Component\WrapperInterface\WrapperInterface;
+use OSS\OssClient;
 
 /**
  * 阿里云OSS Streams.
