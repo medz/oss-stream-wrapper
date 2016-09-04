@@ -57,7 +57,7 @@ class AliyunOssStream implements WrapperInterface
         if ($this->_oss === null) {
             $url = explode(':', $path);
 
-            if (!$url) {
+            if (empty($url)) {
                 throw new Exception("Unable to parse URL $path");
             }
 
@@ -162,7 +162,7 @@ class AliyunOssStream implements WrapperInterface
     public function stream_read($count)
     {
         if (!$this->_objectName) {
-            return false;
+            return '';
         }
 
         // make sure that count doesn't exceed object size
@@ -275,30 +275,27 @@ class AliyunOssStream implements WrapperInterface
     {
         if (!$this->_objectName) {
             return false;
+
+        // Set position to current location plus $offset
+        } elseif ($whence === SEEK_CUR) {
+            $new_pos = $this->_position + $offset;
+
+        // Set position to end-of-file plus $offset
+        } elseif ($whence === SEEK_END) {
+            $new_pos = $this->_objectSize + $offset;
+
+        // Set position equal to $offset
+        } else {
+            $new_pos = $offset;
         }
 
-        switch ($whence) {
-            case SEEK_CUR:
-                // Set position to current location plus $offset
-                $new_pos = $this->_position + $offset;
-                break;
-            case SEEK_END:
-                // Set position to end-of-file plus $offset
-                $new_pos = $this->_objectSize + $offset;
-                break;
-            case SEEK_SET:
-            default:
-                // Set position equal to $offset
-                $new_pos = $offset;
-                break;
-        }
-
-        $ret = ($new_pos >= 0 && $new_pos <= $this->_objectSize);
-        if ($ret) {
+        if ($new_pos >= 0 && $new_pos <= $this->_objectSize) {
             $this->_position = $new_pos;
+
+            return true;
         }
 
-        return $ret;
+        return false;
     }
 
     /**
@@ -326,7 +323,7 @@ class AliyunOssStream implements WrapperInterface
     public function stream_stat()
     {
         if (!$this->_objectName) {
-            return false;
+            return [];
         }
 
         $stat = [];
