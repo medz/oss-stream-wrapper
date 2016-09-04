@@ -122,7 +122,6 @@ class AliyunOssStream implements WrapperInterface
                     $this->_objectSize = (int) $info['content-length'];
                     $this->_position = 0;
                     $this->_writeBuffer = false;
-                    // $this->_getOssClient($path);
                     return true;
                 }
             } catch (\OSS\Core\OssException $e) {
