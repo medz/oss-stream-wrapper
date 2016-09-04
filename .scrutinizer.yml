@@ -7,13 +7,6 @@ filter:
   excluded_paths:
     - tests/*
 build:
-  tests:
-    override:
-      -
-        command: ./vendor/bin/phpunit --coverage-clover=my-coverage-file
-        coverage:
-          file: my-coverage-file
-          format: php-clover
   dependencies:
     before:
       - composer install --prefer-source --no-progress

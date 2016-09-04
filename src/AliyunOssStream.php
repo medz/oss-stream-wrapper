@@ -278,19 +278,15 @@ class AliyunOssStream implements WrapperInterface
 
         // Set position to current location plus $offset
         } elseif ($whence === SEEK_CUR) {
-            $new_pos = $this->_position + $offset;
+            $offset += $this->_position;
 
         // Set position to end-of-file plus $offset
         } elseif ($whence === SEEK_END) {
-            $new_pos = $this->_objectSize + $offset;
-
-        // Set position equal to $offset
-        } else {
-            $new_pos = $offset;
+            $offset += $this->_objectSize;
         }
 
-        if ($new_pos >= 0 && $new_pos <= $this->_objectSize) {
-            $this->_position = $new_pos;
+        if ($offset >= 0 && $offset <= $this->_objectSize) {
+            $this->_position = $offset;
 
             return true;
         }
