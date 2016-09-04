@@ -19,4 +19,4 @@ composer require medz/oss-stream-wrapper
 ```
 
 ### 别名包
-⚠️*如果*觉得这个包的名字不是那么容易记住，请看另一个包`[medz/aliyun-oss](https://packagist.org/packages/medz/aliyun-oss)`这个包作为本包的别名，为了更方便的记忆，当然，类名称有所变化。
+⚠️*如果*觉得这个包的名字不是那么容易记住，请看另一个包[medz/aliyun-oss](https://packagist.org/packages/medz/aliyun-oss)这个包作为本包的别名，为了更方便的记忆，当然，类名称有所变化。
