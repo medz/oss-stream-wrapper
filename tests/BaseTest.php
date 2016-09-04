@@ -26,12 +26,6 @@ class BaseTest extends PHPUnit_Framework_TestCase
         $this->oss->registerStreamWrapper('oss');
     }
 
-    // 删除协议
-    public function tearDown()
-    {
-        $this->oss->unregisterStreamWrapper('oss');
-    }
-
     /**
      * Test get client.
      *
