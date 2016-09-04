@@ -65,7 +65,7 @@ foreach ($finder as $file) {
 ```
 这样，我们就遍历出了在demo目录下存在的文件了。
 
-## 跟多
+## 更多
 如果你觉得，这个是自定义协议流的很好案例，但是你却不知道具体需要实现什么方法，没关系，你只需要依赖一个只包含一个接口类的组件，继承它，实现里面的方法，就可以完成你的自定义流协议。
 
 组件：[medz/stream-wrapper-interface](https://packagist.org/packages/medz/stream-wrapper-interface)
