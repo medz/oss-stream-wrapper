@@ -1,4 +1,4 @@
-# Aliyun OSS SDK for PHP. (&Support streamWrapper) 支持自定义流协议操作。
+# Aliyun OSS support streamWrapper. (&Aliyun OSS SDK for PHP.) 支持OSS自定义流协议操作。
 
 [![Build Status](https://travis-ci.org/medz/oss-stream-wrapper.svg?branch=master)](https://travis-ci.org/medz/oss-stream-wrapper)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/medz/oss-stream-wrapper/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/medz/oss-stream-wrapper/?branch=master)
