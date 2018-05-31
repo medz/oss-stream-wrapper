@@ -171,7 +171,7 @@ class AliyunOssStream implements WrapperInterface
         }
 
         $range_start = $this->_position;
-        $range_end = $this->_position + $count;
+        $range_end = $this->_position + $count -1;
 
         // Only fetch more data from OSS if we haven't fetched any data yet (postion=0)
         // OR, the range end position is greater than the size of the current object
@@ -344,8 +344,8 @@ class AliyunOssStream implements WrapperInterface
             $stat['mode'] |= 0100000;
         }
         $info = $this->_oss->getObjectMeta(AliyunOSS::getBucket(), $this->_objectName);
-        $info = $info['_info'];
-        if (!empty($info['_info'])) {
+        $info = $info['info'];
+        if (!empty($info['info'])) {
             $stat['size'] = $info['download_content_length'];
             $stat['atime'] = time();
             $stat['mtime'] = $info['filetime'];
@@ -450,7 +450,7 @@ class AliyunOssStream implements WrapperInterface
         }
 
         foreach ((array) $list->getObjectList() as $l) {
-            if ($l == $dirName) {
+            if ($l->getKey() == $dirName) {
                 continue;
             }
 
@@ -489,8 +489,8 @@ class AliyunOssStream implements WrapperInterface
 
         try {
             $info = $this->_getOssClient($path)->getObjectMeta(AliyunOSS::getBucket(), $name);
-            if (isset($info['_info']) && !empty($info['_info'])) {
-                $info = $info['_info'];
+            if (isset($info['info']) && !empty($info['info'])) {
+                $info = $info['info'];
                 $stat['size'] = $info['download_content_length'];
                 $stat['atime'] = time();
                 $stat['mtime'] = $info['filetime'];
