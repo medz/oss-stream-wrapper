@@ -171,7 +171,7 @@ class AliyunOssStream implements WrapperInterface
         }
 
         $range_start = $this->_position;
-        $range_end = $this->_position + $count;
+        $range_end = $this->_position + $count -1;
 
         // Only fetch more data from OSS if we haven't fetched any data yet (postion=0)
         // OR, the range end position is greater than the size of the current object
